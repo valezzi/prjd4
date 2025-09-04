@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style2.css" />
+    <link rel="icon" href="img/etec.png" type="image/png" />  
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <title>Registro Glicemia</title>
+  </head>
+
+  <body>
+    <section class="cabecalho">
+      <div>
+        <a href="index.php" class="btn btn-primary">Voltar ao Controle</a>
+      </div>
+    </section>
+    
+    <div class="container mt-5">
+      <div class="card shadow p-4">
+        <div class="card-header text-center bg-primary text-white">
+          <h4>Informe a Glicemia</h4>
+        </div>
+        <div class="card-body">
+          <form id="form-registro" name="GLICEMIA" action="./php/inserir_glic.php" method="post"> 
+            <div class="form-group">
+              <label for="glicemia">Valor Glicemia:</label>
+              <input id="glicemia" name="GLICEMIA" type="number" class="form-control" placeholder="Digite o valor" required/>
+            </div>
+
+            <div class="form-group">
+              <label for="data">Escolha a data da medição:</label>
+              <input type="date" id="data" name="data" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+              <label for="hora">Escolha a hora da medição:</label>
+              <input type="time" id="hora" name="hora" class="form-control" required>
+            </div>
+
+            <div class="text-center">
+              <button type="submit" id="enviar" name="enviar" class="btn btn-success">Registrar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+
+</html>
